@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Nastavení kódování stránky na UTF-8 pro správné zobrazení znaků -->
+    <meta charset="UTF-8">
+    <!-- Zajištění kompatibility s moderními prohlížeči, včetně IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Nastavení responzivního designu pro mobilní zařízení -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titulek stránky, který se zobrazuje na kartě prohlížeče -->
+    <title>Kontakt</title>
+    <!-- Odkaz na externí CSS soubor pro stylování formuláře -->
+    <link rel="stylesheet" href="../css/form.css">
+</head>
+<body>
+    <!-- Hlavní kontejner pro celou sekci kontaktu -->
+    <div class="kontakt-container">
+        <!-- Formulář pro odeslání kontaktu -->
+        <form action="https://api.web3forms.com/submit" method="POST" class="kontakt-levy">
+            <!-- Sekce nadpisu formuláře -->
+            <div class="kontakt-levy-nadpis">
+                <h2>Vyplň údaje</h2>
+                <hr>
+            </div>
+            <!-- Skrytý input pro přenos access_key, který je nezbytný pro odeslání formuláře -->
+            <input type="hidden" name="access_key" value="e2775070-3c75-46ea-a516-9c514a4e29c6">
+            <!-- Textové pole pro jméno, které je povinné pro odeslání -->
+            <input type="text" name="jmeno" placeholder="Jméno" class="kontakt-inputs" required>
+            <!-- Textové pole pro email, které je povinné pro odeslání -->
+            <input type="email" name="email" placeholder="Email" class="kontakt-inputs" required>
+            <!-- Textarea pro poznámky, které jsou povinné pro odeslání -->
+            <textarea name="message" placeholder="Poznámka" class="kontakt-inputs" required></textarea>
+            <!-- Tlačítko pro odeslání formuláře, s obrázkem šipky -->
+            <button type="submit">Poslat <img src="../assets/arrow_icon.png" alt="sipka"></button>
+        </form>
+        <!-- Pravá část stránky, která obsahuje obrázek -->
+        <div class="kontakt-pravy">
+            <img src="../assets/right_img.png" alt="pravyobrazek">
+        </div>
+    </div>
+</body>
+</html>

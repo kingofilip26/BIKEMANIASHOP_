@@ -1,0 +1,301 @@
+/* Nastavení základních stylů pro body */
+body{
+    height:100%; /* Nastaví výšku těla na 100% */
+}
+
+/* Sekce pro hodnocení */
+#hodnoceni{
+    width:100%; /* Šířka celé sekce */
+    background: radial-gradient(#fff, rgb(0, 0, 255)); /* Pozadí s radiačním gradientem */
+    padding-bottom: 100px; /* Spodní okraj */
+    display:flex; /* Použití Flexbox pro rozvržení */
+    flex-direction: column; /* Uspořádání položek do sloupce */
+}
+
+/* Pro obrázky, které se mají přizpůsobit velikosti kontejneru */
+.fit{
+    object-fit: cover; /* Udržuje proporce obrázku při vyplnění kontejneru */
+}
+
+/* Nadpis druhé úrovně */
+.nadpis_dva{
+    font-size: 40px; /* Velikost písma */
+    color: black; /* Barva textu */
+    margin-bottom: 70px; /* Spodní okraj */
+    margin-top: 50px; /* Horní okraj */
+    text-align: center; /* Centrovaný text */
+    padding-top: 40px; /* Horní padding */
+    position: relative; /* Relativní pozice pro pseudoelement */
+}
+.nadpis_dva::after{
+    content:""; /* Vytvoří prázdný obsah pro pseudoelement */
+    background-color: #6030b1; /* Barva pozadí */
+    width:150px; /* Šířka pseudoelementu */
+    height:5px; /* Výška pseudoelementu */
+    border-radius: 5px; /* Zaoblení rohů */
+    position: absolute; /* Absolutní pozice */
+    bottom:0; /* Umístí na spodní okraj */
+    left:50%; /* Horizontální centrování */
+    transform: translateX(-50%); /* Centrum */
+    bottom:-20px; /* Umístí trochu níže než normálně */
+}
+
+/* Kontejner pro třetí sekci */
+.container_tri{
+    width:100%; /* Šířka kontejneru */
+    margin: 0 auto; /* Centrum */
+}
+
+/* Flexbox řada pro třetí sekci */
+.row_tri{
+    width:100%; /* Šířka */
+    max-width: 1500px; /* Maximální šířka */
+    margin:0 auto; /* Centrum */
+    display:flex; /* Flexbox */
+    flex-direction: row; /* Uspořádání do řady */
+    justify-content: center; /* Horizontální centrování */
+    align-items: center; /* Vertikální centrování */
+    gap:10px; /* Mezera mezi položkami */
+}
+
+/* Flexbox sloupec pro třetí sekci */
+.sloupec_tri{
+    width:100%; /* Šířka */
+    max-width: 300px; /* Maximální šířka */
+    display:flex; /* Flexbox */
+    flex-direction: column; /* Uspořádání do sloupce */
+    justify-content: center; /* Vertikální centrování */
+    align-items: center; /* Horizontální centrování */
+    text-align: center; /* Centrovaný text */
+    min-height: 250px; /* Minimální výška */
+    cursor: pointer; /* Kurzory myši pro interakci */
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1); /* Stín kolem položky */
+    transition: all 350ms ease; /* Plynulý přechod při změně */
+    padding-bottom: 30px; /* Spodní padding */
+    padding: 0 30px; /* Padding zleva a zprava */
+}
+
+/* Efekt při najetí myší na sloupec */
+.sloupec_tri:hover{
+    transform: translateY(-10px); /* Pohyb vzhůru při najetí myší */
+}
+
+/* Styl pro obrázky ve sloupci */
+.sloupec_tri img{
+    width:100%; /* Šířka obrázku */
+    max-width: 50px; /* Maximální šířka obrázku */
+    border-radius: 50%; /* Zaoblení obrázku */
+    margin-top:20px; /* Horní okraj */
+    margin-bottom: 10px; /* Spodní okraj */
+}
+
+/* Textové popisky ve sloupci */
+.sloupec_tri p{
+    height: 100%; /* Výška textového bloku */
+    min-height: 70px; /* Minimální výška */
+    color:white; /* Barva textu */
+    font-weight: bold; /* Tučné písmo */
+}
+
+/* Nadpisy ve sloupci */
+.sloupec_tri h3{
+    font-size: 18px; /* Velikost písma */
+    color:white; /* Barva textu */
+}
+
+/* Ikony pro citáty a hodnocení */
+.fa.fa-quote-left{
+    font-size: 35px; /* Velikost ikony */
+    color:orangered; /* Barva ikony */
+}
+.fa.fa-star{
+    color:orangered; /* Barva hvězdy */
+    font-size: 15px; /* Velikost hvězdy */
+}
+
+/* Nadpisy pro prodejny */
+.nadpis{
+    text-align: center; /* Centrovaný text */
+    margin-bottom: 50px; /* Spodní okraj */
+}
+
+/* Pro obrázky prodejen */
+.prodejna_image{
+    width:100%; /* Šířka kontejneru */
+    margin: 0 auto; /* Centrum */
+    display:flex; /* Flexbox */
+    flex-direction:row; /* Uspořádání do řady */
+    justify-content: center; /* Centrum */
+    align-items: center; /* Centrované položky */
+    margin-bottom: 50px; /* Spodní okraj */
+    gap:20px; /* Mezera mezi obrázky */
+}
+
+/* Styl pro obrázky v prodejnách */
+.prodejna_image img{
+    width:100%; /* Šířka obrázku */
+    max-width: 500px; /* Maximální šířka */
+    min-height: 250px; /* Minimální výška */
+    max-height: 250px; /* Maximální výška */
+    transition: 1s; /* Plynulý přechod při interakci */
+}
+
+/* Efekt při najetí myší na obrázek */
+.prodejna_image img:hover{
+    transform: scale(1.2); /* Zvětšení obrázku */
+}
+
+/* Sekce pro sponzory */
+#sponzori{
+    width:100%; /* Šířka sekce */
+}
+
+/* Kontejner pro čtvrtou sekci */
+.container_ctyri{
+    width:100%; /* Šířka */
+}
+
+/* Flexbox řada pro čtvrtou sekci */
+.row_ctyri{
+    width:100%; /* Šířka */
+    max-width: 1500px; /* Maximální šířka */
+    display:flex; /* Flexbox */
+    flex-direction: row; /* Uspořádání do řady */
+    justify-content: center; /* Centrum */
+    align-items: center; /* Centrované položky */
+    margin:  0 auto; /* Centrum */
+}
+
+/* Sloupec pro čtvrtou sekci */
+.sloupec_ctyri{
+    width:100%; /* Šířka */
+    max-width: 300px; /* Maximální šířka */
+}
+
+/* Obrázky ve sloupci pro sponzory */
+.sloupec_ctyri img{
+    width:100%; /* Šířka obrázku */
+    max-width: 170px; /* Maximální šířka obrázku */
+    max-height: 200px; /* Maximální výška obrázku */
+    cursor: pointer; /* Kurzory myši pro interakci */
+}
+
+/* Instagram sekce */
+#instagram{
+    width:100%; /* Šířka sekce */
+}
+
+/* Kontejner pro Instagram */
+.container_instagram{
+    width:100%; /* Šířka */
+    max-width: 1500px; /* Maximální šířka */
+    margin: 0 auto; /* Centrum */
+}
+
+/* Nadpis pro Instagram */
+.container_instagram h3{
+    color:#6030b1; /* Barva textu */
+    cursor: pointer; /* Kurzory myši pro interakci */
+    text-align: center; /* Centrovaný text */
+    margin-bottom: 50px; /* Spodní okraj */
+}
+
+/* Galerie obrázků na Instagramu */
+.gallery img{
+    max-width: 350px; /* Maximální šířka obrázku */
+    width: 100%; /* Šířka obrázku */
+}
+
+/* Galerie kontejner */
+.gallery{
+    display:flex; /* Flexbox */
+    justify-content: center; /* Centrované položky */
+    gap:0.25rem; /* Mezera mezi položkami */
+    transform: preserve-3d; /* Uchování 3D transformací */
+    pointer-events: none; /* Zakáže interakci s galerií */
+}
+
+/* Panel galerie */
+.gallery-panel{
+    flex:1; /* Flexibilní šířka */
+    aspect-ratio: 1 / 1.5; /* Poměr stran */
+    cursor: pointer; /* Kurzory myši pro interakci */
+    pointer-events: auto; /* Umožní interakci */
+    transition: 1s; /* Plynulý přechod */
+    width:100%; /* Šířka */
+    max-width: 350px; /* Maximální šířka */
+    -webkit-box-reflect: below 4px /* Reflektor pro obrázek */
+    linear-gradient(
+        transparent,
+        rgba(0,0,0,0.15)
+    ); /* Efekt zrcadlení */
+}
+
+/* Obrázky v panelu galerie */
+.gallery-panel img{
+    width:100%; /* Šířka obrázku */
+    aspect-ratio: 1 / 1.5; /* Poměr stran obrázku */
+    object-fit: cover; /* Udržení proporcí */
+    border-radius: 4px; /* Zaoblení rohů */
+}
+
+/* Efekt při najetí myší na panel galerie */
+.gallery-panel:hover{
+    transform: scale(1.2); /* Zvětšení obrázku */
+    box-shadow: 0 0 25px 5px rgba(0,0,0,0.5); /* Stín kolem panelu */
+}
+
+/* Efekt při najetí myší na ostatní položky v galerii */
+.gallery:hover > :not(:hover){
+    margin-inline: -1.5rem; /* Posun položek */
+    transform:
+    perspective(400px)
+    rotateY(30deg) /* 3D rotace */
+    scale(0.8); /* Zmenšení */
+}
+
+/* Efekt při najetí myší na další položky v galerii */
+.gallery-panel:hover ~ .gallery-panel{
+    transform: 
+    perspective(400px)
+    rotateY(-30deg) /* 3D rotace */
+    scale(0.8); /* Zmenšení */
+}
+
+/* Responzivní úpravy pro mobilní zařízení */
+@media(max-width:768px){
+    .prodejna_image img{
+        width:100%;
+        max-width: 400px; /* Snížení maximální šířky obrázků */
+    }
+    .prodejna_image{
+        flex-direction: column-reverse; /* Obrácení pořadí obrázků */
+    }
+    .sloupec_tri{
+        width:100%;
+        max-width: 300px; /* Zmenšení šířky sloupců */
+    }
+    .sloupec_ctyri img{
+        width:100%;
+        max-width: 120px; /* Zmenšení maximální šířky obrázků */
+    }
+}
+
+/* Responzivní úpravy pro ještě menší obrazovky */
+@media(max-width:375px){
+    .prodejna_image img{
+        width:100%;
+        max-width: 300px; /* Zmenšení maximální šířky obrázků */
+        object-fit: cover; /* Udržení proporcí obrázků */
+    }
+    .row_tri{
+        flex-direction: column; /* Uspořádání do sloupce */
+    }
+    .sloupec_ctyri img{
+        width:100%;
+        max-width: 60px; /* Zmenšení šířky obrázků */
+    }
+    #hodnoceni{
+        padding-top: 50px; /* Zvýšení paddingu pro hodnocení */
+    }
+}

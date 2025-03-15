@@ -1,0 +1,131 @@
+/* Styl pro sekci jednoho produktu */
+.jeden_produkt{
+    margin-top: 80px; /* Přidání horního okraje 80px */
+}
+
+/* Styl pro obrázky v sekci jednoho produktu */
+.jeden_produkt img{
+    padding:0; /* Zrušení jakéhokoliv paddingu kolem obrázků */
+}
+
+/* Styl pro sloupce v sekci jednoho produktu */
+.jeden_produkt .sloupec_dva{
+    padding:20px; /* Přidání paddingu 20px pro sloupec */
+}
+
+/* Styl pro nadpis h4 v sekci jednoho produktu */
+.jeden_produkt h4{
+    font-size: 22px; /* Nastavení velikosti písma na 22px */
+    font-weight: bold; /* Nastavení písma na tučné */
+}
+
+/* Styl pro select box v sekci jednoho produktu */
+.jeden_produkt select{
+    display: block; /* Zobrazení jako blok (nový řádek) */
+    padding:10px; /* Přidání paddingu 10px */
+    margin:20px 0; /* Okraje nahoře a dole 20px */
+}
+
+/* Styl pro nadpis h1 ve sloupci dva */
+.sloupec_dva h1{
+    font-size: 50px; /* Velikost písma 50px */
+}
+
+/* Styl pro sloupec sedm */
+.sloupec_sedm{
+    width:100%; /* Šířka na 100% */
+    max-width: 500px; /* Maximální šířka 500px */
+}
+
+/* Styl pro sloupec dva */
+.sloupec_dva{
+    max-width: 500px; /* Maximální šířka 500px */
+}
+
+/* Styl pro obrázky v sekci #treti_section */
+#treti_section img{
+    width:100%; /* Šířka obrázku 100% */
+}
+
+/* Flexbox řada pro sekci sest */
+.row_sest{
+    width:100%; /* Šířka 100% */
+    max-width: 1500px; /* Maximální šířka 1500px */
+    display:flex; /* Použití Flexbox */
+    flex-direction: row; /* Uspořádání položek do řady */
+    justify-content:center; /* Centrovaný obsah */
+    align-items: center; /* Vertikální centrování položek */
+    margin:0 auto; /* Centrum */
+    gap:20px; /* Mezera mezi položkami 20px */
+}
+
+/* Styl pro sloupec dva s textem */
+.sloupec_dva{
+    color:#555; /* Barva textu #555 (tmavě šedá) */
+}
+
+/* Styl pro nadpis h4 ve sloupci dva */
+.sloupec_dva h4{
+    font-weight: bold; /* Tučné písmo */
+    margin-top: 10px; /* Horní okraj 10px */
+}
+
+/* Styl pro nadpis h3 ve sloupci dva */
+.sloupec_dva h3{
+    margin-top: 40px; /* Horní okraj 40px */
+    font-size: 20px; /* Velikost písma 20px */
+    margin-bottom: 10px; /* Spodní okraj 10px */
+}
+
+/* Styl pro vstupy v sekci jednoho produktu */
+.jeden_produkt input{
+    width:50px; /* Šířka vstupu 50px */
+    height:40px; /* Výška vstupu 40px */
+    padding-left: 10px; /* Padding vlevo 10px */
+    font-size: 20px; /* Velikost písma 20px */
+    margin-right: 10px; /* Pravý okraj 10px */
+    border: 1px solid #ff523b; /* Rámeček o tloušťce 1px a barvě #ff523b */
+}
+
+/* Styl pro vstupy při aktivním stavu (focus) */
+input:focus{
+    outline: none; /* Zrušení výběrového rámce při aktivním poli */
+}
+
+/* Styl pro ikony ve sekci jednoho produktu */
+.jeden_produkt .fa{
+    color:#ff523b; /* Barva ikon #ff523b */
+    margin-left: 10px; /* Levý okraj 10px */
+}
+
+/* Flexbox řada pro obrázky */
+.image_row{
+    display:flex; /* Použití Flexbox */
+    justify-content: space-between; /* Rozdělení položek mezi sebou */
+}
+
+/* Flexbox sloupec pro obrázky */
+.image_sloupec{
+    flex-basis: 24%; /* Flexibilní základna 24% */
+    cursor: pointer; /* Změna kurzoru na ukazatel */
+}
+
+/* Sekce pro řadu obrázků */
+.row2{
+    margin:0 auto; /* Centrum */
+    width:100%; /* Šířka 100% */
+    max-width: 1500px; /* Maximální šířka 1500px */
+}
+
+/* Responzivní úpravy pro malé obrazovky */
+@media(max-width:375px){
+    /* Flexbox řada pro sekci sest se změní na sloupec */
+    .row_sest{
+        flex-direction: column; /* Uspořádání do sloupce */
+    }
+    
+    /* Zmenšení velikosti nadpisu h1 */
+    .row_sest h1{
+        font-size: 30px; /* Velikost písma na 30px */
+    }
+}

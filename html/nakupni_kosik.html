@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Nastavení kódování stránky na UTF-8 pro správné zobrazení znaků -->
+    <meta charset="UTF-8">
+    <!-- Zajišťuje kompatibilitu s moderními prohlížeči, včetně IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Nastavení responzivního designu pro mobilní zařízení -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Odkaz na externí CSS soubor pro základní styly -->
+    <link rel="stylesheet" href="../css/styly.css">
+    <!-- Odkaz na Google Fonts pro použití písem Lato a Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Odkaz na knihovnu Font Awesome pro ikony -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Odkazy na externí CSS soubory pro různé sekce stránky (produkty, obchod, košík, hodnocení) -->
+    <link rel="stylesheet" href="../css/styly_produkt.css">
+    <link rel="stylesheet" href="../css/styly_obchod.css">
+    <link rel="stylesheet" href="../css/nakupni_kosik.css">
+    <link rel="stylesheet" href="../css/styly_hodnoceni.css">
+    <!-- Titulek stránky, který se zobrazuje na kartě prohlížeče -->
+    <title>BIKEMANIA Shop</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Hlavní div pro hlavičku stránky -->
+            <div class="header_div">
+                <!-- Div pro zobrazení loga a názvu obchodu -->
+                <div class="dohromady_dva">
+                    <!-- Zobrazuje obrázek loga -->
+                    <img src="../obrazky/logo.png" alt="logo" class="osobni_logo">
+                    <!-- Zobrazuje název obchodu -->
+                    <span class="header_nazev">BIKEMANIA Shop</span>
+                </div>
+                <!-- Ikona menu, která při kliknutí spustí funkci pro zobrazení/skrytí menu -->
+                <img class="menu-icon" src="../obrazky/menu_icon.png" alt="ikona" onclick="menutoggle()">
+            </div>
+            
+            <!-- Navigační menu -->
+            <ul id="MenuItems" class="nav__link--list">
+                <!-- Odkaz na domovskou stránku -->
+                <li class="nav_link"><a class="nav__link--anchor link__hover-effect" href="index.html">Domů</a></li>
+                <!-- Odkaz na stránku obchodu -->
+                <li class="nav_link"><a class="nav__link--anchor link__hover-effect" href="obchod.html">Obchod</a></li>
+                <!-- Odkaz na stránku o nás -->
+                <li class="nav_link"><a class="nav__link--anchor link__hover-effect" href="hodnoceni.html">O nás</a></li>
+                <!-- Odkaz na nákupní košík -->
+                <li class="nav_link"><a class="nav__link--anchor link_border" href="index_shop.html">Košík</a></li>
+                <!-- Odkaz na Instagram -->
+                <li class="nav_link"><a class="nav__link--anchor link__hover-effect" href="https://www.instagram.com/bikemania.shop/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Sekce pro nákupní košík -->
+        <section id="nakupni_kosik">
+            <div class="maly_container nakupni_kosik">
+                <!-- Tabulka s produkty v košíku -->
+                <table>
+                    <tr>
+                        <th>Produkty</th>
+                        <th>Počet</th>
+                        <th>Součet</th>
+                    </tr>
+
+                    <!-- Produkt 1 v košíku -->
+                    <tr>
+                        <td>
+                            <div class="kosik_info">
+                                <img src="../obrazky/dres_1.jpg" alt="dres1">
+                                <div>
+                                    <p>Dětský dres</p>
+                                    <small>Cena: 799 Kč</small>
+                                    <br>
+                                    <a href="">Odstranit</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1"></td>
+                        <td>799 Kč</td>
+                    </tr>
+
+                    <!-- Produkt 2 v košíku -->
+                    <tr>
+                        <td>
+                            <div class="kosik_info">
+                                <img src="../obrazky/kolo_1.jpg" alt="kolo1">
+                                <div>
+                                    <p>Kolo</p>
+                                    <small>Cena: 8999 Kč</small>
+                                    <br>
+                                    <a href="">Odstranit</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1"></td>
+                        <td>8999 Kč</td>
+                    </tr>
+
+                    <!-- Produkt 3 v košíku -->
+                    <tr>
+                        <td>
+                            <div class="kosik_info">
+                                <img src="../obrazky/dres_2.jpg" alt="dres2">
+                                <div>
+                                    <p>Dětský dres</p>
+                                    <small>Cena: 749 Kč</small>
+                                    <br>
+                                    <a href="">Odstranit</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1"></td>
+                        <td>599 Kč</td>
+                    </tr>
+                </table>
+
+                <!-- Celková cena -->
+                <div class="celkova_cena">
+                    <table>
+                        <tr>
+                            <td>Mezisoučet</td>
+                            <td>11599 Kč</td>
+                        </tr>
+
+                        <tr>
+                            <td>DPH</td>
+                            <td>120 Kč</td>
+                        </tr>
+
+                        <tr>
+                            <td>Celková cena</td>
+                            <td>11719 Kč</td>
+                        </tr>
+
+                        <tr>
+                            <td><a href="form.html"><button>Koupit</button></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sekce pro sponzory -->
+        <section id="sponzori">
+            <div class="container_ctyri">
+                <div class="row_ctyri">
+                    <!-- Sponzorská loga -->
+                    <div class="sloupec_ctyri">
+                        <img src="../obrazky/logo_skoda.jpeg" alt="skoda">
+                    </div>
+                    <div class="sloupec_ctyri">
+                        <img src="../obrazky/logo_2.svg" alt="kraj">
+                    </div>
+                    <div class="sloupec_ctyri">
+                        <img src="../obrazky/logo_as.png" alt="as">
+                    </div>
+                    <div class="sloupec_ctyri">
+                        <img src="../obrazky/logo_4.svg" alt="autoklever">
+                    </div>
+                    <div class="sloupec_ctyri">
+                        <img src="../obrazky/logo_fokus.jpg" alt="fokus">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Skript pro ovládání zobrazení/skrytí menu -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px"){
+                MenuItems.style.maxHeight = "200px";
+            }
+            else{
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* Styl pro sekci nákupního košíku */
+#nakupni_kosik{
+    width:100%; /* Nastavení šířky na 100% */
+}
+
+/* Styl pro div obsahující nákupní košík */
+.nakupni_kosik{
+    margin:80px auto; /* Nastavení horního okraje na 80px a centrování horizontálně */
+    width:100%; /* Šířka 100% */
+    max-width: 1500px; /* Maximální šířka 1500px */
+}
+
+/* Styl pro tabulky v nákupním košíku */
+table{
+    width:100%; /* Šířka tabulky na 100% */
+    border-collapse: collapse; /* Spojení hranic tabulky */
+}
+
+/* Styl pro košíkové informace (flexbox pro více řádek) */
+.kosik_info{
+    display:flex; /* Použití Flexbox */
+    flex-wrap: wrap; /* Obalování položek do nových řádků */
+}
+
+/* Styl pro záhlaví tabulky */
+th{
+    text-align: left; /* Zarovnání textu vlevo */
+    padding: 5px; /* Padding 5px kolem textu */
+    color:white; /* Barva textu bílá */
+    background-color: #ff523b; /* Pozadí červené barvy */
+    font-weight: normal; /* Normální písmo (ne tučné) */
+}
+
+/* Styl pro buňky tabulky */
+td{
+    padding:10px 5px; /* Padding 10px nahoře a dole, 5px vlevo a vpravo */
+}
+
+/* Styl pro vstupy v buňkách tabulky */
+td input{
+    width:40px; /* Šířka vstupu 40px */
+    height:30px; /* Výška vstupu 30px */
+    padding:5px; /* Padding 5px pro vstupy */
+}
+
+/* Styl pro odkazy v tabulce */
+td a{
+    color:#ff523b; /* Barva odkazu červená */
+    font-size: 12px; /* Velikost písma 12px */
+}
+
+/* Styl pro obrázky v buňkách tabulky */
+td img{
+    width:80px; /* Šířka obrázku 80px */
+    height:80px; /* Výška obrázku 80px */
+    margin-right: 10px; /* Pravý okraj 10px mezi obrázkem a textem */
+}
+
+/* Styl pro sekci celkové ceny */
+.celkova_cena{
+    display:flex; /* Použití Flexbox pro zarovnání */
+    justify-content: flex-end; /* Zarovnání položek na pravou stranu */
+}
+
+/* Styl pro tabulku v sekci celkové ceny */
+.celkova_cena table{
+    border-top: 3px solid #ff523b; /* Horní rámeček červené barvy */
+    width:100%; /* Šířka tabulky 100% */
+    max-width: 400px; /* Maximální šířka tabulky 400px */
+}
+
+/* Styl pro buňku posledního sloupce tabulky */
+td:last-child{
+    text-align: right; /* Zarovnání textu v poslední buňce doprava */
+}
+
+/* Styl pro záhlaví posledního sloupce tabulky */
+th:last-child{
+    text-align: right; /* Zarovnání textu v poslední záhlavní buňce doprava */
+}
+
+/* Styl pro tlačítko v sekci celkové ceny */
+.celkova_cena button{
+    width:100%; /* Šířka tlačítka 100% */
+    max-width: 100px; /* Maximální šířka tlačítka 100px */
+    padding:10px 30px; /* Padding 10px nahoře a dole, 30px vlevo a vpravo */
+    background-color: orangered; /* Pozadí tlačítka oranžová barva */
+    border: none; /* Bez rámečku */
+    border-radius: 15px; /* Zaoblení rohů tlačítka */
+    cursor: pointer; /* Změna kurzoru na ukazatel */
+    transition: all 350ms ease; /* Plynulý přechod při změně vlastností */
+    color:#fff; /* Barva písma bílá */
+}
+
+/* Styl pro tlačítko při hover efektu */
+.celkova_cena button:hover{
+    background-color: orange; /* Pozadí tlačítka se změní na oranžové při hoveru */
+}

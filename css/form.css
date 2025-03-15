@@ -1,0 +1,112 @@
+/* Obecné nastavení pro všechny elementy */
+*{
+    padding:0; /* Zrušení výchozího paddingu u všech elementů */
+    margin:0; /* Zrušení výchozího okraje u všech elementů */
+    box-sizing: border-box; /* Zajištění, že padding a border se zahrnou do šířky a výšky elementů */
+}
+
+/* Nastavení pro celé tělo stránky */
+body{
+    font-family: "Outfit"; /* Nastavení písma pro text */
+    background: linear-gradient(#ffdad5,#fff7f9); /* Pozadí s barevným přechodem od světle růžové k bílému */
+}
+
+/* Styl pro kontejnery kontaktu */
+.kontakt-container{
+    height:100vh; /* Výška kontejneru na 100% výšky okna */
+    display:flex; /* Použití Flexbox pro uspořádání v řadě */
+    align-items: center; /* Vertikální zarovnání do středu */
+    justify-content: space-evenly; /* Rovnoměrné rozložení elementů po celé šířce */
+}
+
+/* Styl pro levý sloupec (kontaktní formulář) */
+.kontakt-levy{
+    display:flex; /* Použití Flexbox pro uspořádání v sloupci */
+    flex-direction: column; /* Uspořádání prvků ve sloupci */
+    align-items: start; /* Zarovnání prvků k levé straně */
+    gap:20px; /* Mezera 20px mezi jednotlivými prvky */
+}
+
+/* Styl pro nadpis levého sloupce */
+.kontakt-levy-nadpis h2{
+    font-weight: 600; /* Tlusté písmo */
+    color:#a363aa; /* Fialová barva písma */
+    font-size: 40px; /* Velikost písma 40px */
+    margin-bottom: 5px; /* Spodní okraj 5px */
+}
+
+/* Styl pro vodorovnou čáru pod nadpisem */
+.kontakt-levy-nadpis hr{
+    border:none; /* Zrušení výchozího rámečku */
+    width:120px; /* Šířka čáry 120px */
+    height:5px; /* Výška čáry 5px */
+    background: #a363aa; /* Fialová barva pozadí čáry */
+    border-radius: 10px; /* Zaoblení rohů čáry */
+    margin-bottom: 20px; /* Spodní okraj 20px */
+}
+
+/* Styl pro vstupy (inputy) v kontaktním formuláři */
+.kontakt-inputs{
+    width:400px; /* Šířka vstupu 400px */
+    height:50px; /* Výška vstupu 50px */
+    border:none; /* Bez rámečku */
+    outline:none; /* Bez rámečku při zaostření */
+    padding-left: 25px; /* Padding 25px na levé straně */
+    font-weight: 500; /* Střední tučnost písma */
+    color:#666; /* Šedá barva písma */
+    border-radius: 50px; /* Zaoblení rohů vstupu */
+}
+
+/* Styl pro textarea (textová oblast) v kontaktním formuláři */
+.kontakt-levy textarea{
+    height:140px; /* Výška textové oblasti 140px */
+    padding-top: 15px; /* Padding nahoře 15px */
+    border-radius: 20px; /* Zaoblení rohů textové oblasti */
+}
+
+/* Styl pro vstupy při zaostření (focus) */
+.kontakt-inputs:focus{
+    border:2px solid  #ff994f; /* Červený rámeček při zaostření */
+}
+
+/* Styl pro placeholder texty ve vstupních polích */
+.kontakt-inputs::placeholder{
+    color:#a9a9a9; /* Šedá barva pro placeholder text */
+}
+
+/* Styl pro tlačítka v kontaktním formuláři */
+.kontakt-levy button{
+    display:flex; /* Použití Flexbox pro uspořádání obsahu tlačítka */
+    align-items: center; /* Vertikální zarovnání do středu */
+    padding: 15px 30px; /* Padding 15px nahoře a dole, 30px vlevo a vpravo */
+    font-size: 16px; /* Velikost písma 16px */
+    color:white; /* Barva písma bílá */
+    gap:10px; /* Mezera 10px mezi ikonou a textem */
+    border:none; /* Bez rámečku */
+    border-radius: 50px; /* Zaoblení rohů tlačítka */
+    background: linear-gradient(270deg,#ff994f,#fa6d86); /* Barevný přechod pozadí tlačítka */
+    cursor: pointer; /* Změna kurzoru na ruku při hoveru */
+}
+
+/* Styl pro ikonu v tlačítku */
+.kontakt-levy button img{
+    height:15px; /* Výška ikony 15px */
+}
+
+/* Styl pro obrázky v pravé části */
+.kontakt-pravy img{
+    width:500px; /* Šířka obrázku 500px */
+}
+
+/* Responzivní design pro obrazovky do šířky 800px */
+@media (max-width:800px) {
+    /* Styl pro vstupy v kontaktním formuláři na menších obrazovkách */
+    .kontakt-inputs{
+        width:80vw; /* Šířka vstupu na 80% šířky obrazovky */
+    }
+
+    /* Skrývání pravé části na menších obrazovkách */
+    .kontakt-pravy{
+        display:none; /* Skrytí pravé části */
+    }
+}

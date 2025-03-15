@@ -1,0 +1,187 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <!-- Nastavení znakové sady dokumentu -->
+    <meta charset="UTF-8">
+    <!-- Zajišťuje správné zobrazení v různých prohlížečích -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Nastavení viewportu pro mobilní zařízení (umožňuje responzivní design) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Odkaz na externí CSS soubor pro styling stránky (styly.css je umístěn v nadřazeném adresáři 'css') -->
+    <link rel="stylesheet" href="../css/styly.css">
+    
+    <!-- Odkaz na externí Google Fonts pro písmo na stránce -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Odkaz na Font Awesome pro ikony (použité zde pro hvězdičky a ikonu Instagramu) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Další externí CSS pro stylování stránky hodnocení -->
+    <link rel="stylesheet" href="../css/styly_hodnoceni.css">
+    
+    <!-- Název stránky, jak se zobrazuje v záložce prohlížeče -->
+    <title>BIKEMANIA Shop</title>
+</head>
+<body>
+    <!-- Hlavička stránky s navigačním menu -->
+    <header>
+        <nav>
+            <div class="header_div">
+                <!-- Logo a název obchodu uvnitř divu -->
+                <div class="dohromady_dva">
+                    <img src="../obrazky/logo.png" alt="logo" class="osobni_logo"> <!-- Obrázek loga -->
+                    <span class="header_nazev">BIKEMANIA Shop</span> <!-- Název obchodu -->
+                </div>
+                <!-- Ikona menu pro mobilní zobrazení (spuštěná pomocí funkce 'menutoggle' v JavaScriptu) -->
+                <img class="menu-icon" src="../obrazky/menu_icon.png" alt="ikona" onclick="menutoggle()">
+            </div>
+
+            <!-- Odkazy v navigačním menu -->
+            <ul id="MenuItems" class="nav__link--list">
+                <li class="nav_link"><a class="nav__link--anchor link__hover-effect " href="index.html">Domů</a></li>
+                <li class="nav_link"><a class="nav__link--anchor link__hover-effect"  href="obchod.html">Obchod</a></li>
+                <li class="nav_link"><a class="nav__link--anchor link__hover-effect" href="hodnoceni.html">O nás</a></li>
+                <li class="nav_link"><a class="nav__link--anchor link_border" href="index_shop.html">Košík</a></li>
+                <li class="nav_link"><a class="nav__link--anchor link__hover-effect"  href="https://www.instagram.com/bikemania.shop/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hlavní obsah stránky -->
+    <main>
+        <!-- Sekce pro hodnocení zákazníků -->
+        <section id="hodnoceni">
+            <div class="container_tri">
+                <!-- Nadpis pro obrázky prodejny -->
+                <h2 class="nadpis_dva">Naše Prodejna</h2>
+                <div class="prodejna_image">
+                    <!-- Obrázky prodejny -->
+                    <img class="fit" src="../obrazky/prodejna.jpg" alt="prodejna">
+                    <img src="../obrazky/prodejna_dva.jpg" alt="prodejna2">
+                </div>
+                <!-- Nadpis pro hodnocení zákazníků -->
+                <h2 class="nadpis_dva">Hodnocení zákazníků</h2>
+                <div class="row_tri">
+                    <!-- Recenze zákazníka 1 -->
+                    <div class="sloupec_tri">
+                        <i class="fa fa-quote-left"></i> <!-- Ikona uvozovek -->
+                        <p>Pan majitel ochotně pomohl s problémem na kole, super. Navíc mají spoustu hezkých hadříků</p>
+                        <div class="hodnoceni">
+                            <!-- Hvězdičky hodnocení -->
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <img src="../obrazky/customer-2.jpg" alt="zakaznik1"> <!-- Obrázek zákazníka -->
+                        <h3>Tomáš Mleziva</h3> <!-- Jméno zákazníka -->
+                    </div>
+
+                    <!-- Recenze zákazníka 2 -->
+                    <div class="sloupec_tri">
+                        <i class="fa fa-quote-left"></i> <!-- Ikona uvozovek -->
+                        <p>Maximální spokojenost rychlý a ochotný servis😎👍</p>
+                        <div class="hodnoceni">
+                            <!-- Hvězdičky hodnocení -->
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <img src="../obrazky/customer-1.jpg" alt="zakaznik2"> <!-- Obrázek zákazníka -->
+                        <h3>Zuzana Podolská</h3> <!-- Jméno zákazníka -->
+                    </div>
+
+                    <!-- Recenze zákazníka 3 -->
+                    <div class="sloupec_tri">
+                        <i class="fa fa-quote-left"></i> <!-- Ikona uvozovek -->
+                        <p>Vždy spokojenost s přístupem a provedeným servisem.</p>
+                        <div class="hodnoceni">
+                            <!-- Hvězdičky hodnocení -->
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <img src="../obrazky/customer-3.jpg" alt="zakaznik3"> <!-- Obrázek zákazníka -->
+                        <h3>Lukáš Palacký</h3> <!-- Jméno zákazníka -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekce pro Instagram -->
+        <section id="instagram">
+            <div class="container_instagram">
+                <h2 class="nadpis_dva">SLEDUJTE NÁŠ INSTAGRAM</h2>
+                <a href="https://www.instagram.com/bikemania.shop/" target="_blank"><h3>@bikemania.shop</h3></a>
+            </div>
+            <div class="gallery">
+                <!-- Obrázky z Instagramu -->
+                <div class="gallery-panel">
+                    <img src="../obrazky/instagram_1.png" alt="instagram1">
+                </div>
+
+                <div class="gallery-panel">
+                    <img src="../obrazky/instagram_2.png" alt="instagram2">
+                </div>
+
+                <div class="gallery-panel">
+                    <img src="../obrazky/instagram_3.png" alt="instagram3">
+                </div>
+
+                <div class="gallery-panel">
+                    <img src="../obrazky/instagram_4.png" alt="instagram4">
+                </div>
+
+                <div class="gallery-panel">
+                    <img src="../obrazky/instagram_5.png" alt="instagram5">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekce pro sponzory -->
+        <section id="sponzori">
+            <div class="container_ctyri">
+                <div class="row_ctyri">
+                    <!-- Loga sponzorů -->
+                    <div class="sloupec_ctyri">
+                        <img src="../obrazky/logo_skoda.jpeg" alt="skoda">
+                    </div>
+                    <div class="sloupec_ctyri">
+                        <img src="../obrazky/logo_2.svg" alt="kraj">
+                    </div>
+                    <div class="sloupec_ctyri">
+                        <img src="../obrazky/logo_as.png" alt="as">
+                    </div>
+                    <div class="sloupec_ctyri">
+                        <img src="../obrazky/logo_4.svg" alt="autoklever">
+                    </div>
+                    <div class="sloupec_ctyri">
+                        <img src="../obrazky/logo_fokus.jpg" alt="fokus">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript pro rozbalení menu na mobilu -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px"){
+                MenuItems.style.maxHeight = "200px";
+            }
+            else{
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+</body>
+</html>

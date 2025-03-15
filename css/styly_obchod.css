@@ -1,0 +1,23 @@
+header{
+    background:radial-gradient(#fff,blue);
+}
+
+.row_pet{
+    width:100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+select{
+    border:1px solid #ff523b;
+    padding: 5px;
+}
+select:focus{
+    outline: none;
+}
+.row_dva{
+    margin-bottom: 50px;
+}

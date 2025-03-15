@@ -1,0 +1,450 @@
+
+/* Resetování základního stylu pro všechny elementy */
+*{
+    box-sizing: border-box; /* Zajišťuje, že padding a border jsou součástí šířky a výšky elementu */
+    font-family: "Lato"; /* Nastavuje písmo pro celou stránku */
+    padding:0; /* Odstraňuje defaultní padding u všech elementů */
+    margin:0; /* Odstraňuje defaultní margin u všech elementů */
+}
+body{
+    height:100%; /* Zajišťuje, že tělo stránky zabírá celou výšku */
+}
+h1,h2,h3,h4,h5,h6,span{
+    color:#242424; /* Nastavuje barvu textu pro všechny nadpisy a span elementy */
+}
+p{
+    font-size: 16px; /* Nastavuje velikost písma pro odstavce */
+    line-height: 1.5; /* Nastavuje výšku řádku pro odstavce */
+}
+html{
+    scroll-behavior: smooth; /* Zajišťuje plynulé scrollování při přesunu mezi kotvami */
+}
+a{
+    text-decoration: none; /* Odstraňuje podtržení u všech odkazů */
+    position: relative; /* Umožňuje pozicování elementů uvnitř odkazu */
+}
+li{
+    list-style-type: none; /* Odstraňuje standardní odrážky u seznamu */
+}
+
+/* Menu ikona (hamburger) */
+.menu-icon{
+    width:100%; /* Nastavuje šířku na 100% */
+    width: 28px; /* Nastavuje konkrétní šířku pro ikonu */
+    display:none; /* Skrývá ikonu menu ve výchozím stavu */
+}
+
+/* Flexbox kontejner pro spojení dvou částí */
+.dohromady_dva{
+    display:flex; /* Používá Flexbox pro uspořádání elementů */
+    flex-direction: row; /* Určuje, že položky budou seřazeny vodorovně */
+    justify-content: center; /* Vytváří mezery mezi položkami, ale všechny je zarovná na střed */
+    align-items: center; /* Vertikálně centrováno */
+}
+
+/* Styl pro odkazy v navigaci s efektem hover */
+.nav__link--anchor{
+    margin:0 12px; /* Nastavuje okraje kolem každého odkazu */
+    color:#242424; /* Barva textu odkazu */
+    text-decoration: none; /* Odstraňuje podtržení */
+    font-weight: 700; /* Tučné písmo pro odkazy */
+}
+
+/* Efekt po najetí myší na odkaz (čára pod odkazem) */
+.link__hover-effect:after{
+    content: ""; /* Vytvoří pseudo-element */
+    position: absolute; /* Pozice elementu absolutně vůči rodiči */
+    height:3px; /* Nastavuje výšku čáry */
+    width:0; /* Šířka čáry je na začátku 0 */
+    bottom:-3px; /* Umístí čáru těsně pod text odkazu */
+    right:0; /* Umístí čáru na pravý okraj */
+    transition: all 300ms ease; /* Přidává plynulý přechod */
+    background-color: #6030b1; /* Barva čáry */
+}
+
+/* Efekt při najetí myší na odkaz (roztáhne čáru) */
+.link__hover-effect:hover:after{
+    width:100%; /* Roztáhne čáru na celou šířku odkazu */
+    left:0; /* Umístí čáru na začátek odkazu */
+}
+
+/* Styl pro tlačítko "Koupit" */
+.button_koupit{
+    background-color: orangered; /* Barva pozadí */
+    padding: 10px 30px; /* Vnitřní okraje pro tlačítko */
+    border-radius: 20px; /* Zaoblené rohy tlačítka */
+    transition: all 350ms ease; /* Plynulý přechod pro všechny změny */
+    color:#fff; /* Barva textu */
+}
+
+/* Efekt při najetí myší na tlačítko */
+.button_koupit:hover{
+    background-color: orange; /* Změní barvu tlačítka na oranžovou při hoveru */
+}
+
+/* HEADER */
+header{
+    width:100%; /* Šířka headeru na 100% */
+    max-width: 1500px; /* Maximální šířka headeru */
+    margin:0 auto; /* Centrum headeru */
+    height:100px; /* Výška headeru */
+    margin-bottom: 50px; /* Spodní okraj mezi headerem a dalšími částmi */
+}
+.header_div{
+    width:100%; /* Šířka divu je 100% */
+    max-width: 400px; /* Maximální šířka divu */
+    display:flex; /* Používá Flexbox */
+    flex-direction: row; /* Srovnává elementy vodorovně */
+    justify-content: center; /* Centrovat elementy vodorovně */
+    align-items: center; /* Centrovat elementy vertikálně */
+}
+.header_nazev{
+    font-size: 30px; /* Velikost písma pro nadpis */
+}
+
+/* Navigace */
+nav{
+    width:100%; /* Navigace zabírá celou šířku */
+    height:100%; /* Navigace zabírá celou výšku */
+    display:flex; /* Používá Flexbox */
+    flex-direction: row; /* Srovnání položek vodorovně */
+    justify-content: space-between; /* Položky jsou oddělené a zarovnané na kraj */
+    align-items: center; /* Zarovnání elementů vertikálně */
+    padding:0 12px; /* Okraje kolem navigace */
+}
+nav ul{
+    display:flex; /* Flexbox pro seznam v navigaci */
+    flex-direction: row; /* Vodorovné uspořádání položek */
+    justify-content: center; /* Centrovat položky vodorovně */
+    align-items: center; /* Centrovat položky vertikálně */
+}
+.osobni_logo{
+    width:100%; /* Šířka loga na 100% */
+    max-width: 100px; /* Maximální šířka loga */
+    margin: 0 12px; /* Okraje kolem loga */
+}
+.nav_link-a{
+    margin:0 12px; /* Okraje kolem jednotlivých odkazů */
+    color:#242424; /* Barva textu odkazu */
+    font-weight: 700; /* Tučné písmo pro odkazy */
+}
+.link_border{
+    background-color: #6030b1; /* Barva pozadí odkazu */
+    padding:8px 20px; /* Vnitřní okraje kolem odkazu */
+    border-radius: 50px; /* Zaoblené rohy odkazu */
+    color:white; /* Barva textu */
+    transition: all 300ms ease; /* Plynulý přechod pro změny */
+}
+.link_border:hover{
+    background-color: #5d3eff; /* Změna barvy při hoveru */
+}
+
+/* hlavní sekce */
+#hlavni_section{
+    width:100%; /* Sekce zabírá celou šířku */
+    background:radial-gradient(#fff,blue) /* Radialní gradient pozadí */
+}
+.container{
+    width:100%; /* Sekce zabírá celou šířku */
+    max-width: 1500px; /* Maximální šířka kontejneru */
+    margin:0 auto; /* Centrovaný kontejner */
+    display:flex; /* Flexbox pro layout */
+    flex-direction: row; /* Srovnání položek vodorovně */
+    justify-content: center; /* Centrovat položky vodorovně */
+    align-items: center; /* Centrovat položky vertikálně */
+}
+
+/* část jedna */
+.cast_jedna{
+    width:100%; /* Celková šířka */
+    max-width: 600px; /* Maximální šířka */
+    display:flex; /* Flexbox pro uspořádání */
+    flex-direction: column; /* Srovnání položek vertikálně */
+    justify-content: left; /* Zarovnání položek na levý okraj */
+    align-items: left; /* Zarovnání položek na levý okraj */
+}
+.nadpis{
+    font-size: 60px; /* Velikost písma pro hlavní nadpis */
+}
+.podnadpis{
+    font-size: 20px; /* Velikost písma pro podnadpis */
+}
+
+/* část dvě */
+.cast_dva{
+    width:100%; /* Šířka 100% */
+    max-width: 800px; /* Maximální šířka */
+}
+.kolo_image{
+    width:100%; /* Šířka obrázku */
+    max-width: 800px; /* Maximální šířka obrázku */
+}
+
+/* tlačítko */
+.button{
+    background-color: #6030b1; /* Barva pozadí tlačítka */
+    padding:20px 20px; /* Vnitřní okraje */
+    border-radius: 50px; /* Zaoblené rohy tlačítka */
+    color:white; /* Barva textu */
+    transition: all 300ms ease; /* Plynulý přechod pro změny */
+    width:100%; /* Tlačítko zabírá 100% šířky */
+    max-width: 190px; /* Maximální šířka tlačítka */
+    text-align: center; /* Centrovat text v tlačítku */
+    margin-top: 20px; /* Okraj nad tlačítkem */
+}
+.button:hover{
+    background-color: #5d3eff; /* Změna barvy při hoveru */
+}
+
+/* další sekce */
+#druha_section{
+    width:100%; /* Sekce zabírá 100% šířky */
+    background-image: url(../obrazky/s.jpg); /* Pozadí obrázkem */
+}
+
+/* Styl pro řádek */
+.row{
+    width:100%; /* Zabírá celou šířku */
+    padding: 20px; /* Vnitřní okraje */
+    padding-bottom: 50px; /* Spodní okraj */
+}
+
+/* Další sekce */
+.row h2{
+    font-size: 40px; /* Velikost písma pro nadpis */
+    color:white; /* Barva textu */
+    margin-bottom: 70px; /* Spodní okraj */
+    margin-top: 100px; /* Horní okraj */
+}
+.row h2{
+    text-align: center; /* Centrovat text */
+}
+.druhy{
+    width:100%; /* Celková šířka */
+    max-width: 1500px; /* Maximální šířka */
+    display:flex; /* Flexbox pro uspořádání */
+    flex-direction: row; /* Vodorovné uspořádání */
+    justify-content: space-around; /* Rozdělit prostor rovnoměrně mezi položkami */
+    align-items: center; /* Vertikální centrování */
+    margin:0 auto; /* Centrum */
+}
+.druh{
+    width:100%; /* Šířka každé položky */
+    max-width: 150px; /* Maximální šířka */
+    height:200px; /* Výška položky */
+    display:flex; /* Flexbox pro layout */
+    flex-direction: column; /* Srovnání položek vertikálně */
+    justify-content: center; /* Vertikálně centrováno */
+    align-items: center; /* Vertikálně centrováno */
+    text-align: center; /* Centrovat text */
+}
+.druh img{
+    width:70px; /* Šířka obrázku */
+}
+.druh h5{
+    font-size: 22px; /* Velikost písma */
+    color:white; /* Barva textu */
+    margin-top: 20px; /* Horní okraj */
+}
+
+/* další sekce */
+#treti_section{
+    width:100%; /* Celková šířka */
+    padding-bottom: 50px; /* Spodní okraj */
+}
+
+/* malý kontejner */
+.maly_container{
+    width:100%; /* Celková šířka */
+}
+.row_dva{
+    width:100%; /* Šířka */
+    max-width: 1500px; /* Maximální šířka */
+    display:flex; /* Flexbox pro layout */
+    flex-direction: row; /* Vodorovně */
+    justify-content: center; /* Centrum */
+    align-items: center; /* Centrovat vertikálně */
+    margin:0 auto; /* Centrum */
+    gap:20px; /* Mezera mezi položkami */
+}
+.sloupec{
+    width:100%; /* Šířka */
+    height:400px; /* Výška */
+    display:flex; /* Flexbox */
+    flex-direction: column; /* Vertikálně */
+    justify-content: center; /* Centrovat vertikálně */
+    align-items: center; /* Centrovat horizontálně */
+    transition:all 350ms ease; /* Plynulý přechod */
+    box-shadow: 10px 10px 8px 10px #888888; /* Stín kolem sloupce */
+}
+.fa-brands{
+    font-size: 30px; /* Velikost ikon */
+}
+.sloupec img{
+    width:100%; /* Šířka obrázku */
+    max-width: 300px; /* Maximální šířka obrázku */
+    min-height: 250px; /* Minimální výška */
+    max-height: 250px; /* Maximální výška */
+    margin-bottom: 10px; /* Spodní okraj */
+}
+.maly_container h2{
+    font-size: 40px; /* Velikost písma pro nadpis */
+    color:black; /* Barva textu */
+    margin-bottom: 70px; /* Spodní okraj */
+    margin-top: 100px; /* Horní okraj */
+    text-align: center; /* Centrovat text */
+}
+.cena{
+    font-size: 22px; /* Velikost písma pro cenu */
+    color:red; /* Barva textu */
+    font-weight: bold; /* Tučné písmo */
+}
+.sloupec h4{
+    font-size: 20px; /* Velikost písma pro podnadpis */
+}
+.title{
+    position: relative; /* Nastavuje pozici pro pseudoelement */
+}
+.title::after{
+    content:""; /* Vytváří pseudoelement */
+    background-color: #6030b1; /* Barva pozadí */
+    width:150px; /* Šířka */
+    height:5px; /* Výška */
+    border-radius: 5px; /* Zaoblené rohy */
+    position: absolute; /* Pozice absolutně */
+    bottom:0; /* Umístí na spodní okraj */
+    left:50%; /* Horizontální centrování */
+    transform: translateX(-50%); /* Centrování */
+    bottom:-20px; /* Umístí trochu níže než je normálně */
+}
+.sloupec:hover{
+    transform: translateY(-10px); /* Efekt při najetí myší, pohyb vzhůru */
+}
+
+/* FOOTER */
+footer{
+    width:100%; /* Šířka footeru */
+}
+
+/* RESPONZIVITA pro různé šířky obrazovky */
+@media(max-width:768px){ /* Pro zařízení s šířkou do 768px */
+    .header_nazev{
+        font-size: 20px; /* Snížení velikosti písma pro mobilní zařízení */
+    }
+    .osobni_nazev{
+        width:50px; /* Zmenšení šířky */
+    }
+    .header_div{
+        width:100%; /* Plná šířka */
+        max-width: 300px; /* Maximální šířka */
+    }
+    nav{
+        padding:0 5px; /* Menší okraje */
+    }
+    .cast_jedna{
+        width:100%; /* Plná šířka */
+        max-width: 400px; /* Maximální šířka */
+    }
+    .cast_dva{
+        width:100%; /* Plná šířka */
+        max-width: 300px; /* Maximální šířka */
+    }
+    .nadpis{
+        font-size: 30px; /* Menší nadpis */
+    }
+    .row_dva{
+        flex-direction: column; /* Seznam položek ve sloupci */
+    }
+}
+@media(max-width:375px){ /* Pro velmi malá zařízení */
+    .header_nazev{
+        font-size: 20px; /* Velikost písma pro nadpis */
+    }
+    nav{
+        display:flex; /* Flexbox pro navigaci */
+        flex-direction: row; /* Horizontální uspořádání */
+        justify-content: center; /* Centrovat */
+        align-items: center; /* Centrovat vertikálně */
+    }
+    .osobni_logo{
+        max-width: 50px; /* Zmenšení loga */
+    }
+    nav ul{
+        margin: 0 auto; /* Centrovat */
+        justify-content: center; /* Centrum */
+    }
+    li{
+        width: 200px; /* Zmenšení šířky položek */
+        text-align: center; /* Centrovat text */
+        align-items: center; /* Centrovat vertikálně */
+    }
+    .link_border{
+        padding:0; /* Bez paddingu */
+        margin:0; /* Bez okrajů */
+        background-color: white; /* Bílé pozadí */
+        color:#242424; /* Barva textu */
+        text-align: center; /* Centrovat text */
+    }
+    .header_div{
+        margin-bottom: 10px; /* Zmenšení okrajů */
+    }
+    .container{
+        display:flex; /* Flexbox */
+        flex-direction: column; /* Vertikální uspořádání */
+        justify-content: center; /* Centrum */
+        align-items: center; /* Centrování */
+        text-align: center; /* Centrování textu */
+    }
+    .cast_jedna{
+        justify-content: center; /* Centrování */
+        align-items: center; /* Centrování */
+    }
+    .row h2{
+        font-size: 30px; /* Menší nadpis */
+    }
+    .druhy{
+        flex-direction: column; /* Uspořádání položek do sloupce */
+        justify-content: center; /* Centrum */
+        align-items: center; /* Centrum */
+    }
+}
+@media(max-width:800px){ /* Pro zařízení s šířkou do 800px */
+    nav ul{
+        position: absolute; /* Umístí seznam absolutně */
+        top:70px; /* Umístí pod header */
+        left:0; /* Na levou stranu */
+        background:#333; /* Tmavé pozadí */
+        width:100%; /* Plná šířka */
+        flex-direction: column; /* Vertikální seznam */
+        justify-content: flex-end; /* Zarovná na konec */
+        align-items: flex-end; /* Zarovná na pravý okraj */
+        overflow: hidden; /* Skryje přetékající obsah */
+        transition: max-height 0.5s; /* Přechod při změně výšky */
+    }
+    nav ul li{
+        display:block; /* Zobrazí položky blokově */
+        margin-right: 50px; /* Právý okraj */
+        margin-top: 10px; /* Horní okraj */
+        margin-bottom: 10px; /* Spodní okraj */
+    }
+    .nav__link--anchor{
+        color:white; /* Barva textu */
+    }
+    .menu-icon{
+        display:block; /* Zobrazí ikonu menu */
+        cursor: pointer; /* Změna kurzoru */
+    }
+    .link_border{
+        padding:0; /* Bez paddingu */
+        border-radius: 0; /* Bez zaoblení */
+        width:0; /* Nastaví šířku na 0 */
+        border:none; /* Bez okraje */
+        background:#333; /* Tmavé pozadí */
+        color:white; /* Barva textu */
+        font-weight: bold; /* Tučné písmo */
+    }
+    .header_div{
+        justify-content: space-between; /* Položky jsou na krajích */
+        max-width: 700px; /* Maximální šířka */
+    }
+}
